@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quentin Nowacki - Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-links">
+                <a href="#about"><i class="fas fa-user"></i> À propos</a>
+                <a href="#skills"><i class="fas fa-code"></i> Compétences</a>
+                <a href="#projects"><i class="fas fa-project-diagram"></i> Projets</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Quentin Nowacki</h1>
+            <div class="text-slider">
+                <div class="slide active">Bienvenue dans mon univers de programmation</div>
+                <div class="slide">Développeur Web & Game Dev</div>
+                <div class="slide">Passionné par la création</div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="highlight-text">
+                        <span class="accent-text">Passionné</span> par l'informatique et la programmation
+                    </p>
+                    <p class="main-text">
+                        Je suis en terminale et toujours en quête d'apprentissage. Je développe des projets qui mêlent théorie et pratique : 
+                        des algorithmes sur France-IOI pour affiner ma logique,ainsi que des sites web et des jeux avec Pygame pour concrétiser mes idées. 
+                        J’aime explorer de nouvelles compétences pour allier créativité et technique.
+                    </p>
+                </div>
+                <div class="about-cards">
+                    <div class="info-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Développeur</h3>
+                        <p>Création de sites web et applications</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Game Dev</h3>
+                        <p>Développement de jeux en Python</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-palette"></i>
+                        <h3>Dessin</h3>
+                        <p>Passionné par le dessin et l'art digital</p>
+                        <a href="https://www.instagram.com/nquentin07/" class="instagram-button" target="_blank">
+                            <i class="fab fa-instagram"></i> Voir mes dessins
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Compétences</h2>
+            <div class="skills-container">
+                <div class="skill-box">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Dev</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag">
+                            <i class="fab fa-python"></i>
+                            Python
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fab fa-html5"></i>
+                            HTML/CSS
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-code"></i>
+                            C++
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-code"></i>
+                            OCaml
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fab fa-js"></i>
+                            JavaScript
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="skill-box">
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Skills</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag">
+                            <i class="fas fa-trophy"></i>
+                            Persévérance
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-users"></i>
+                            Esprit d'équipe
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-lightbulb"></i>
+                            Curiosité
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Passions</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag">
+                            <i class="fas fa-music"></i>
+                            Piano
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-swimmer"></i>
+                            Sport/Natation
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-palette"></i>
+                            Dessin
+                        </div>
+                        <a href="https://www.instagram.com/nquentin07/" class="instagram-button" target="_blank">
+                            <i class="fab fa-instagram"></i> Voir mes dessins
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card visible" onclick="openModal('jeu-python')">
+                    <div class="project-image">
+                        <img src="images/pygame.png" alt="Jeu en Python">
+                        <div class="project-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Jeu en Python</h3>
+                        <p>Développement d'un jeu interactif avec Pygame</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pygame</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="project-card visible" onclick="openModal('site-internet')">
+                    <div class="project-image">
+                        <img src="images/website.jpg" alt="Site Internet">
+                        <div class="project-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Site Internet</h3>
+                        <p>Portfolio personnel responsive</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card visible" onclick="openModal('france-ioi')">
+                    <div class="project-image">
+                        <img src="images/france_ioi.png" alt="France-IOI">
+                        <div class="project-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>France-IOI</h3>
+                        <p>Résolution de problèmes algorithmiques en Python. Je m'investit actuellement dans le C++ et je compte commencé l'Ocaml</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Ocaml</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card visible" onclick="openModal('pix')">
+                    <div class="project-image">
+                        <img src="images/pix.png" alt="Certification PIX">
+                        <div class="project-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Certification PIX</h3>
+                        <p>Compétences numériques certifiées</p>
+                        <div class="project-tags">
+                            <span class="tag">Certification</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="jeu-python" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('jeu-python')">&times;</span>
+            <h2>Jeu en Python</h2>
+            <div class="modal-body">
+                <img src="images/pygame.png" alt="Jeu en Python">
+                <div class="modal-text">
+                    <p>Au cours de cette année, j'ai développé plusieurs jeux en Python qui m'ont permis d'explorer différents genres et mécaniques de jeu.</p>
+                    <ul>
+                        <li>Vous pouvez les tester en cliquant ici 👇</li>
+                    </ul>
+                    <a href="mesjeux.html" class="project-button" target="_blank">
+                        Voir mes jeux <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="site-internet" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('site-internet')">&times;</span>
+            <h2>Site Internet</h2>
+            <div class="modal-body">
+                <img src="images/website.jpg" alt="Site Internet">
+                <div class="modal-text">
+                    <p>Personnellement j'ai pu développer plusieurs sites web qui m'ont permis d'acquérir une solide expérience en développement web.</p>
+                    <a href="regression/site_regression.html" class="project-button" target="_blank">
+                        Voir un exemple de site <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="france-ioi" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('france-ioi')">&times;</span>
+            <h2>France-IOI</h2>
+            <div class="modal-body">
+                <img src="images/france_ioi.png" alt="France-IOI">
+                <div class="modal-text">
+                    <p>Grâce à France-IOI, j'ai pu en apprendre davantage en termes de programmation et m'améliorer de jour en jour.</p>
+                    <p>Vous pouvez voir mes compétences ici. 
+                        <button class="france-ioi-button">
+                            <a href="https://github.com/QuentinNo07/Code-France-IOI.git" class="france-ioi-button">
+                            quelques exercices résolus </a><i class="fab fa-github"></i>
+                        </button>
+                    </p>
+                    <button class="pix-button" onclick="toggleFranceIOICurve()">
+                        Voir mes compétences <i class="fas fa-chart-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="france-ioi-curve">
+        <span class="close-curve">&times;</span>
+        <div class="curve-image-container">
+            <img src="images/courbe_france_ioi.png" alt="Courbe de progression France-IOI">
+        </div>
+    </div>
+
+    <div id="pix" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('pix')">&times;</span>
+            <h2>Certification PIX</h2>
+            <div class="modal-body">
+                <img src="images/pix.png" alt="Certification PIX">
+                <div class="modal-text">
+                    <p>Pix m'a permis d'améliorer mes compétences numériques en m'entraînant sur différents domaines et en suivant ma progression au fil du temps.</p>
+                    </ul>
+                    <button class="pix-button" onclick="togglePixVerification()">
+                        Vérifier ma certification <i class="fas fa-external-link-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pix-verification">
+        <h3>Vérifier ma certification</h3>
+        <p>Pour vérifier mon niveau PIX, suivez ces étapes :</p>
+        <ol>
+            <li>Rendez-vous sur <a href="https://app.pix.fr/verification-certificat" target="_blank">app.pix.fr/verification-certificat</a></li>
+            <li>Entrez le code suivant : <br>
+            P-P7YGK6JF</li>
+        </ol>
+        <a href="https://app.pix.fr/verification-certificat" class="pix-button" target="_blank">
+            Vérifier ma certification <i class="fas fa-external-link-alt"></i>
+        </a>
+    </div>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:XXXXXXX@gmail.com">qnowacki2007@gmail.com</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Téléphone</h3>
+                        <p><a href="tel:07 81 01 33 31">06 51 35 72 93</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Localisation</h3>
+                        <p>Île-de-France, France</p>
+                    </div>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/nquentin07/" class="social-link" title="Instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/QuentinNo07" class="social-link" title="GitHub" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p> 2025 Quentin Nowacki. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <div class="image-modal">
+        <span class="close-image">&times;</span>
+        <img src="" alt="Image agrandie">
+    </div>
+</body>
+</html>
