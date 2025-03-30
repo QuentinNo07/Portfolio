@@ -1,0 +1,431 @@
+/* ensemble page*/
+
+body {
+    background-color: rgb(248, 242, 242);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start; 
+    height: 100vh;
+    margin: 0;
+    padding-top: 20px
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 1500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.parties {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3{font-size: 25px;}
+
+h4{
+    border-left: 5px solid aqua; /* Trait bleu à gauche du titre */
+    padding-left: 15px; /* Ajoute un espace entre le titre et la bordure */
+    font-size: 30px;
+    color: rgb(33, 163, 238);
+}
+
+/* haut de page*/
+
+header.parties {
+    background-color: rgb(33, 163, 238);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+img.logo-site {
+    width: 120px;
+    height: auto;
+}
+
+
+h1{
+    font-size: 100px;
+    color: white;
+    text-align: center; 
+}
+
+.slogan{
+    font-size: 35px;
+    color: white;
+}
+
+h1, .slogan {
+    margin: 0; /* Supprime toutes les marges */
+}
+
+/* explication fonctionnalité*/
+
+.title-with-line {
+    border-left: 5px solid aqua; /* Trait bleu à gauche du titre */
+    padding-left: 15px; /* Ajoute un espace entre le titre et la bordure */
+    font-size: 40px;
+    color: rgb(33, 163, 238);
+}
+
+.texte_explication{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+
+/** partie fonctionnelle**/
+h3{
+    font-size: 40px;
+    color: rgb(33, 163, 238);
+}
+
+.utilite {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espace entre les colonnes */
+    width: 100%;
+    margin-bottom: 20px; /* Espace en bas de la section */
+}
+
+.partie-excel, .partie-input {
+    flex: 1; /* Les sections prennent le même espace */
+    padding: 20px;
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    text-align: left; /* Aligne le contenu à gauche */
+}
+
+.input_fichier{
+    background-color: #f0f8ff; /* Bleu très clair */
+    padding: 15px;
+    border-radius: 8px; /* Coins arrondis pour l'encadré */
+    border: 1px dashed #007BFF; /* Bordure en pointillés bleue */
+    margin-top: 20px;
+}
+
+.info-excel{
+    background-color: rgb(248, 242, 242);
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.info_utilisation_excel{
+    margin-left: 20px;
+}
+
+.info-excel ul {
+    list-style: none; /* Supprime les puces par défaut */
+    padding-left: 10px;
+}
+
+.info-excel ul li::before {
+    content: "•"; /* Ajoute une puce personnalisée */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em; /* Espace entre la puce et le texte */
+    margin-left: -1em;
+}
+
+li{
+    font-size: 20px;
+}
+
+
+/** info entrée manuellement*/
+
+.partie-input {
+    display: flex;
+    flex-direction: column; /* Éléments empilés verticalement */
+    align-items: center; /* Centrer horizontalement */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fond clair pour un effet épuré */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+#add-row {
+    background-color: #007bff; /* Bleu standard */
+    color: white;
+    margin-bottom: 20px;
+}
+
+#add-row:hover {
+    background-color: #0056b3;
+}
+
+.data-table {
+    width: 100%;
+    max-width: 600px; /* Limite la largeur */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #f1f1f1; /* Couleur d’en-tête */
+    color: #333;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.delete-row {
+    background-color: #dc3545; /* Rouge pour suppression */
+    color: white;
+}
+
+.delete-row:hover {
+    background-color: #c82333;
+}
+
+/*choix de regression et calcule*/
+
+
+
+.choix_representation {
+    display: flex;
+    flex-direction: column; /* Organisation verticale */
+    align-items: center; /* Centre horizontalement */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fond clair */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.choix_regression {
+    display: flex;
+    justify-content: space-evenly; /* Espacement égal entre les boutons */
+    flex-direction: column;
+    align-items: center; /* Aligne verticalement */
+    width: 100%; /* Utilise toute la largeur */
+    max-width: 500px; /* Limite la largeur */
+    margin-bottom: 20px; /* Espace avec le bouton "Calculer" */
+}
+
+.regression_lin {
+    background-color: #ff7f00; /* Couleur orange */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.regression_lin:hover {
+    background-color: #f27500; /* Orange foncé */
+}
+
+.regression_car {
+    background-color: #008cff; /* Bleu */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.regression_car:hover {
+    background-color: #1273c2; /* Bleu foncé */
+}
+
+.regression_exp {
+    background-color: #ff0000; /* Rouge */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.regression_exp:hover {
+    background-color: #c71212; /* Rouge foncé */
+}
+
+#calculate {
+    display: flex;
+    justify-content: center;
+    background-color: #28a745; /* Vert */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#calculate:hover {
+    background-color: #218838; /* Vert foncé */
+}
+
+.btn {
+    color: white;
+    margin-top: 15px;
+}
+
+.btn_graph {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Prendre toute la largeur disponible */
+    gap: 10px;   /* Espacement entre les boutons */
+    margin: 10px;
+    
+}
+
+.titre_resultat{
+    padding-left: 15px; /* Ajoute un espace entre le titre et la bordure */
+    font-size: 40px;
+    color: rgb(33, 163, 238);
+}
+
+.btn_telecharger{
+    background-color: #28a745;
+    color: white;
+}
+
+.btn_regenerer{
+    color: white;
+    background-color: gray;
+}
+
+.show_resultat{
+    margin-top: 20px;
+}
+
+.show_case{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.show_func{
+    border: 3px solid #007bff; /* Épaisseur, style et couleur de la bordure */
+    padding: 5px;
+    margin: 10px; 
+    border-radius: 6px;
+    width: 150px;
+    max-width: 300px;
+}
+
+
+
+
+
+
+
+
+/** partie informations */
+
+.titre_info{
+    display: flex;
+    align-items: center;
+}
+
+.image_info{
+    width: auto;
+    height: 40px;
+}
+
+.info_regre{
+    font-size: 40px;
+    color: rgb(33, 163, 238);
+    margin-left: 15px;
+}
+
+
+.accordion {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 6px;
+}
+
+.accordion-header {
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+.accordion-header:hover {
+    background-color: white;
+}
+
+.accordion-content {
+    font-size: 25px;
+    padding: 10px;
+    display: none;
+    border-top: 3px solid #000000;
+}
+
+.accordion.active .accordion-content {
+    display: block;
+}
+
+.arrow {
+    transition: transform 0.3s;
+}
+
+.accordion.active .arrow {
+    transform: rotate(90deg);
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="java.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="container">
+
+      <header class="parties">
+          <img class="logo-site" src="image/logo_regression.png" alt="">
+          <h1>Outil de regression lineaire</h1>
+          <p class="slogan"> Représenter vos données !!!</p>
+      </header>
+      
+      <div class="parties explication">
+          <h2 class="title-with-line">Fonctionnalité du site</h2>
+          <p class="texte_explication">Bienvenue sur le site. Ce site vous permet pour n'importe quelles circonstance de faire des regressoins linaire, exponnetielle 
+              ou encore carré a partir de donné entré directement dans le site ou via le telechargement d'un fichier Excel.</p>
+      </div>
+
+
+      <div class="utilite">
+
+          <div class="partie-excel parties">
+              <h3>Télécharger un fichier Excel</h3>
+            <div class="input_fichier">
+              <input type="file" id="file-upload" accept=".csv" />
+            </div>
+            <div class="info-excel">
+              <div class="info_utilisation_excel">
+                <h3>Instructions</h3>
+                <ul>
+                  <li>Format <b>.csv</b> uniquement</li>
+                  <li>Deux colonnes : <b>X</b> et <b>Y</b></li>
+                  <li>Valeurs numériques</li>
+                  <li>Pas d'en-têtes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Section Saisie Manuelle -->
+          <div class="partie-input parties">
+            <h3>Saisie Manuelle</h3>
+            <button id="add-row" class="btn">+ Ajouter une ligne</button>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>X</th>
+                  <th>Y</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="number" placeholder="Valeur X" /></td>
+                  <td><input type="number" placeholder="Valeur Y" /></td>
+                  <td><button class="delete-row">🗑️ Supprimer</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="choix_representation parties">
+            <h3>Choix de la représentation</h3>
+            <div class="choix_regression">
+                <button id="regression-lin" class="btn btn-primary regression_lin">Régression linéaire</button>
+                <button id="regression-exp" class="btn btn-primary regression_exp">Régression exponentielle</button>
+                <button id="regression-car" class="btn btn-primary regression_car">Régression carré</button>
+                <button id="regression-degre" class="btn btn-primary regression_degre">
+                    Régression degré
+                    <input type="number" id="degre-input" placeholder="Entrez un degré" />
+                </button>
+            </div>
+            <button id="calculate" class="btn btn-primary">Calculer (choix : )</button>
+        </div>
+        
+
+      </div>
+      
+      
+
+
+      <div class="resultat parties">
+        <h3 class="titre_resultat">Résultats de la Régression</h3>
+
+        <h4>Graphique</h4>
+        <canvas id="myChart"></canvas>
+
+        <div class=" show_resultat parties">
+
+          <h4>Equation de la regression</h4>
+          <div class="show_case">
+            <div class="show_func">
+              <p id="representation">Representation : </p>
+            </div>
+  
+            <div class="show_func">
+              <p id="affichage_equa"> Equation : </p>
+            </div>
+    
+          </div>
+
+          <div class="btn_graph">
+            <button id="telecharger" class="btn_telecharger">Télecharger</button>
+            <button id="regenerer" class="btn_regenerer"> regenerer</button>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="information_generales parties">
+          <div>
+              <div class="titre_info">
+                  <img class="image_info" src="image/logo_info.webp" alt="">
+                  <h4 class="info_regre">Information suplémentaire</h4>
+              </div>
+
+
+              <div class="accordion">
+                  <div class="accordion-header">
+                    <h3>Qu'est ce que la regression ?</h3>
+                    <span class="arrow">➤</span>
+                  </div>
+                  <div class="accordion-content">
+                    La regression est une methode mathematique qui permet de comprendre, analyser et meme prvoir des phenoméne.
+                  </div>
+              </div>
+
+              <div class="accordion">
+                  <div class="accordion-header">
+                    <h3>Histoire du site</h3>
+                    <span class="arrow">➤</span>
+                  </div>
+                  <div class="accordion-content">
+                      Se site as etait créer dans le but de repondre a une problématique posée en classe de DNL : Comment representer une regression lineaire. 
+                      Cependant de nombreuse personne de mon groupe de classe ont voulut aller plus loin en créer chacun un site internet, offrant a chaque
+                        fois plus de fonctionnalités qu'autrui. Voici le mien.
+                  </div>
+                </div>
+          </div>
+      </div>
+
+      <footer class="parties">
+      </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion').forEach(item => {
+          item.addEventListener('click', () => {
+            item.classList.toggle('active');
+          });
+        });
+      </script>      
+</body>
+</html>
